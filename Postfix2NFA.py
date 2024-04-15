@@ -56,7 +56,7 @@ class NFA:
 
             elif chr_posfix == '.':
                 First_NFA_Operand = NFA_Stack.pop()
-                Second_NFA_Operand =  NFA_Stack.pop()
+                Second_NFA_Operand =   NFA_Stack.pop()
                 
                 Second_NFA_Operand.accept.add_Edge('ϵ', First_NFA_Operand.start)
                 NFA_Stack.append(NFA(Second_NFA_Operand.start, First_NFA_Operand.accept))
